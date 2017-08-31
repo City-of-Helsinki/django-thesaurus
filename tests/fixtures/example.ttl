@@ -1,0 +1,71 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix example: <http://example.com/onto/example/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+example:c11 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:broader example:c1 ;
+    skos:inScheme example: ;
+    skos:prefLabel "Narrower concept c11 en"@en,
+        "Narrower concept c11 fi"@fi,
+        "Narrower concept c11 sv"@sv .
+
+example:c12 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:broader example:c1 ;
+    skos:inScheme example: ;
+    skos:prefLabel "Narrower concept c12 en"@en,
+        "Narrower concept c12 fi"@fi,
+        "Narrower concept c12 sv"@sv .
+
+example:c21 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:broader example:c2 ;
+    skos:inScheme example: ;
+    skos:prefLabel "Narrower concept c21 en"@en,
+        "Narrower concept c21 fi"@fi,
+        "Narrower concept c21 sv"@sv .
+
+example:c3 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:inScheme example: ;
+    skos:prefLabel "Top concept c3 en"@en,
+        "Top concept c3 fi"@fi,
+        "Top concept c3 sv"@sv .
+
+<http://lexvo.org/id/iso639-3/eng> a dcterms:LinguisticSystem .
+
+<http://lexvo.org/id/iso639-3/fin> a dcterms:LinguisticSystem .
+
+<http://lexvo.org/id/iso639-3/swe> a dcterms:LinguisticSystem .
+
+example:c2 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:inScheme example: ;
+    skos:prefLabel "Top concept c2 en"@en,
+        "Top concept c2 fi"@fi,
+        "Top concept c2 sv"@sv .
+
+example:c1 a <http://example.com/onto/example-meta/Concept>,
+        skos:Concept ;
+    skos:inScheme example: ;
+    skos:prefLabel "Top concept c1 en"@en,
+        "Top concept c1 fi"@fi,
+        "Top concept c1 sv"@sv .
+
+<http://example.com/onto/example-meta/Concept> a owl:Class ;
+    rdfs:label "General concept"@en,
+        "Yleiskäsite"@fi,
+        "Allmänbegrepp"@sv ;
+    rdfs:subClassOf skos:Concept .
+
+example: a skos:ConceptScheme ;
+    dc:title "Example ontology en"@en,
+        "Example ontology fi"@fi,
+        "Example ontology sv"@sv .

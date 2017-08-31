@@ -1,0 +1,10 @@
+Django
+django-parler
+rdflib
+pytest
+pytest-cov
+pytest-django
+pytest-factoryboy
+flake8
+isort
+pep8-naming

@@ -1,0 +1,19 @@
+sudo: false
+language: python
+
+cache: pip
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+
+install:
+  - pip install -U pip
+  - pip install -r requirements-dev.txt
+
+script:
+  - flake8
+  - py.test -ra -vvv -cov=.
+  - isort -c
