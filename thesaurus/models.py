@@ -48,4 +48,7 @@ class Collection(TranslatableModel):
 class Member(models.Model):
     collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
     concept = models.ForeignKey(Concept, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
+    parent = models.ForeignKey(
+        'self', on_delete=models.CASCADE, null=True,
+        blank=True, related_name='children', db_index=True
+    )
