@@ -15,5 +15,5 @@ install:
 
 script:
   - flake8
-  - py.test -ra -vvv -cov=.
+  - py.test -ra -vvv --cov=.
   - isort -c
